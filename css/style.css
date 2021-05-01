@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #28B5B5;
+}
+.game {
+    width: 100%;
+    height: 200px;
+    border-bottom: 100px solid #1b722f;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+}
+
+
+#robot {
+    width: 100px;
+    height: 150px;
+    background-image: url(../img/Person.png);
+    background-size: 100px 150px;
+    position: relative;
+    top: 50px;
+    left: -120px;
+    transition: 0.9s linear all;
+    transform: rotate(35deg);
+}
+#robot.test {
+    transform: rotate(0deg);
+}
+#cactus {
+    width: 100px;
+    height: 150px;
+    background-image: url(../img/cactus.png);
+    background-size: 100px 150px;
+    position: relative;
+    bottom: 100px;
+    left: 1900px;
+    animation: cactusMov 3s infinite linear;
+}
+
+@keyframes cactusMov {
+    0% {
+        left: 1900px;
+    }
+    100% {
+        left: -100px;
+    }
+}
+
+.jump {
+    animation: jump 1s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 50px;
+    }
+    30% {
+        top: -100px;
+    }
+    50% {
+        top: -150px;
+    }
+    80% {
+        top: -100px;
+    }
+    100% {
+        top: 50px;
+    }
+}
+
+#obloka-one {
+    width: 300px;
+    height: 100px;
+    background-size: 300px 100px;
+    background-image: url(../img/Облока.png);
+    z-index: 2;
+    position: absolute;
+    top: 150px;
+    animation: oblokaone 14s linear infinite;
+}
+#obloka-two {
+    width: 500px;
+    height: 200px;
+    background-size: 500px 200px;
+    background-image: url(../img/Облока2.png);
+    position: relative;
+    top: 50px;
+    left: 100px;
+    animation: oblokatwo 14s linear infinite;
+}
+#obloka-there {
+    width: 400px;
+    height:150px;
+    background-size: 400px 150px;
+    background-image: url(../img/Облока.png);
+    z-index: 2;
+    position: absolute;
+    left: 400px;
+    top: 100px;
+    animation: oblokathere 15s linear infinite;
+}
+
+@keyframes oblokaone {
+    0% {
+        left: 2000px;
+    }
+    100% {
+        left: -500px;
+    }
+}
+@keyframes oblokatwo {
+    0% {
+        left: 2800px;
+    }
+    100% {
+        left: -500px;
+    }
+}
+@keyframes oblokathere {
+    0% {
+        left: 3200px;
+    }
+    100% {
+        left: -500px;
+    }
+}
